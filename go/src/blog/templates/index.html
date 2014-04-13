@@ -1,0 +1,10 @@
+{{define "title" }}My blog{{end}}
+{{define "header"}}<h1>{{template "title"}}</h1>{{end}}
+{{define "content"}}
+{{range .posts }}
+  <a href="/post/{{.post.Key}}/"><h1>{{.post.Title}}</h1></a>
+  <p>{{.post.Bstring}}</p>
+  <p>{{.date}}</p>
+{{end}}
+{{end}}
+{{define "javascript"}}{{end}}
